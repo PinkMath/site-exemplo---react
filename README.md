@@ -5,7 +5,7 @@
 Clonar o repositorio:
 
 ```
-git clone 
+git clone https://github.com/PinkMath/site-exemplo---react.git
 ```
 
 Abra a pasta que acabou de ser clonada e rode:
