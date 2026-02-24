@@ -1,0 +1,84 @@
+/* header */
+.header.start {
+  background: linear-gradient(
+    135deg,
+    var(--primary-700) 0%,
+    var(--primary-600) 100%
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  overflow: hidden;
+}
+
+.header.start.nav {
+  color: white;
+  background: none;
+  padding: var(--space-6) 0;
+  overflow: hidden;
+}
+
+.header.start.nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-8);
+}
+
+.header.start.nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--header-text-color);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  position: relative;
+  border-radius: 10px;
+}
+
+.header.start.nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header.start.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
+}
+
+.header.start.nav a:hover::after,
+.header.start.nav a.active::after {
+  width: 100%;
+}
+
+.wellcome {
+  background: linear-gradient(
+    135deg,
+    var(--primary-600) 0%,
+    var(--primary-500) 100%
+  );
+  color: white;
+  padding: var(--space-20) 0;
+  text-align: center;
+}
+
+.wellcome h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-tight);
+}
+
+.wellcome p {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  margin: 0;
+  opacity: 0.95;
+}

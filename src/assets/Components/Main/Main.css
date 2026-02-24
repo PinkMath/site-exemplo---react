@@ -1,0 +1,148 @@
+/* main */
+.cards-section {
+  padding: var(--space-20) 0;
+  background: white;
+  flex: 1;
+}
+
+.sucesso {
+  background: var(--primary-50);
+  padding: var(--space-16) 0;
+  text-align: center;
+}
+
+.sucesso.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sucesso.container blockquote {
+  font-size: var(--font-size-2xl);
+  font-style: italic;
+  color: var(--gray-700);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.sucesso.container blockquote cite {
+  display: block;
+  margin-top: var(--space-6);
+  font-size: var(--font-size-base);
+  color: var(--primary-600);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+}
+
+.cards-section {
+  padding: var(--space-20);
+  background: white;
+  flex: 1;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-400));
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-200);
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.card h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-800);
+  margin-bottom: var(--space-3);
+}
+
+.card p {
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.featured-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    135deg,
+    var(--primary-600) 0%,
+    var(--primary-500) 100%
+  );
+  color: white;
+  padding: var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: anima 6s ease infinite;
+}
+
+@keyframes anima {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.featured-card h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.featured-card p {
+  font-size: var(--font-size-lg);
+  margin: 0;
+  opacity: 0.95;
+}
