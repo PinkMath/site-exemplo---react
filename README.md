@@ -11,10 +11,5 @@ git clone https://github.com/PinkMath/site-exemplo---react.git
 Abra a pasta que acabou de ser clonada e rode:
 
 ```
-npm install
-```
-e
-
-```
-npm run dev
+npm install && npm run dev
 ```
